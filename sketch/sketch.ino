@@ -23,11 +23,11 @@ void setup()
 }
 
 void loop() {
-  menu = map(analogRead(pot4), 0, 1023, 0, 3);
+  menu = map(analogRead(pot4), 0, 1023, 0, 4);
   if (menu == 0) customLight();
   if (menu == 1) blueLight();
   if (menu == 2) yellowLight();
-  if (menu == 3) SanicDash();
+  if (menu >= 3) SanicDash();
   FastLED.show();
 }
 
