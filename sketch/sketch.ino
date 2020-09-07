@@ -43,7 +43,6 @@ void blueLight(){
                     byte(map(photo_stats,0,onlight,206,0)),
                       byte(map(photo_stats,0,onlight,235,0)));
   }
-  FastLED.show();
 }
 
 void YellowLight(){
@@ -55,7 +54,6 @@ void YellowLight(){
                     byte(map(photo_stats,0,onlight,255,0)),
                       byte(map(photo_stats,0,onlight,0,0)));
   }
-  FastLED.show();
 }
 
 void customLight(){
@@ -64,7 +62,6 @@ void customLight(){
                     byte(map(analogRead(pot2),0,1023,0,255)),
                       byte(map(analogRead(pot3),0,1023,0,255)));
   }
-  FastLED.show();
 }
 
 
