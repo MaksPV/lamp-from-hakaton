@@ -1,6 +1,5 @@
 #define NUM_LEDS 26
 #include "FastLED.h"
-#include "GyverButton.h"
 #define PIN 13
 CRGB leds[NUM_LEDS];
 byte counter;
@@ -12,8 +11,6 @@ byte menu;
 #define pot2 A2
 #define pot3 A3
 #define pot4 A4
-
-GButton butt(BTN_PIN);
 
 void setup()
 {
