@@ -4,12 +4,14 @@
 #define PIN 13
 CRGB leds[NUM_LEDS];
 byte counter;
+byte menu;
 #define photo A0
 #define BTN_PIN 2
 #define onlight 310
 #define pot1 A1
 #define pot2 A2
 #define pot3 A3
+#define pot4 A4
 
 GButton butt(BTN_PIN);
 
@@ -24,7 +26,11 @@ void setup()
 }
 
 void loop() {
-  customLight();
+  menu = map(analogRead(pot4), 0, 1023, 0, 3);
+  if (menu == 0) customLight();
+  if (menu == 1) blueLight();
+  if (menu == 2) yellowLight();
+  if (menu == 3) SanicDash();
   FastLED.show();
 }
 
