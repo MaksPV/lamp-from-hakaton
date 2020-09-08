@@ -5,7 +5,6 @@ CRGB leds[NUM_LEDS];
 byte counter;
 byte menu;
 #define photo A0
-#define BTN_PIN 2
 #define onlight 310
 #define pot1 A1
 #define pot2 A2
